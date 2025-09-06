@@ -1,6 +1,6 @@
 let socket;
 let connected = false;
-const WS_URL = "ws://localhost:8787/ws"; // Ändern wenn du online hostest
+const WS_URL = "https://68bbedfe5a6abdadb860bf11--storied-praline-8d2db0.netlify.app/"; // Ändern wenn du online hostest
 
 const intro = document.getElementById("intro");
 const chat = document.getElementById("chat");
