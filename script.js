@@ -1,6 +1,7 @@
 let socket;
 let connected = false;
-const WS_URL = "https://myvent.onrender.com"; // Ändern wenn du online hostest
+const WS_URL = "wss://myvent.onrender.com/ws";
+ // Ändern wenn du online hostest
 
 const intro = document.getElementById("intro");
 const chat = document.getElementById("chat");
