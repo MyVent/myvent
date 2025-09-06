@@ -1,7 +1,9 @@
 import { WebSocketServer } from 'ws';
 import { nanoid } from 'nanoid';
 
-const wss = new WebSocketServer({ port: 8787, path: '/ws' });
+const PORT = process.env.PORT || 8787;
+const wss = new WebSocketServer({ port: PORT, path: '/ws' });
+
 const queue = [];
 
 function say(ws, obj) {
@@ -34,4 +36,4 @@ wss.on('connection', (ws) => {
   });
 });
 
-console.log("MyVent Server läuft auf ws://localhost:8787/ws");
+console.log(`Server läuft auf Port ${PORT}`);
