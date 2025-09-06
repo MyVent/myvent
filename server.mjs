@@ -21,18 +21,26 @@ wss.on("connection", (ws) => {
   ws.on("message", (msg) => {
     let data = {};
     try { data = JSON.parse(msg.toString()); } catch {}
+    
     if (data.type === "find") {
+      ws.nickname = data.nickname || "Anon"; // speichern
       if (queue.length) pair(ws, queue.shift());
       else queue.push(ws);
     }
-    if (data.type === "msg" && ws.partner) say(ws.partner, { type: "msg", text: data.text });
+
+    if (data.type === "msg" && ws.partner) {
+      say(ws.partner, { type: "msg", text: data.text, nickname: ws.nickname });
+    }
+
     if (data.type === "typing" && ws.partner) say(ws.partner, { type: "typing", on: !!data.on });
   });
+
   ws.on("close", () => {
     const idx = queue.indexOf(ws);
     if (idx >= 0) queue.splice(idx, 1);
     if (ws.partner) say(ws.partner, { type: "left" });
   });
 });
+
 
 console.log(`MyVent Server läuft auf Port ${PORT}`);
