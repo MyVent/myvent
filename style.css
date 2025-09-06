@@ -130,3 +130,65 @@ footer {
 
 .hidden { display: none; }
 .error { color: #f88; margin-top: 8px; }
+
+/* Mobile / Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  #nicknameInput {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  #chat {
+    width: 95%;
+    padding: 0.8rem;
+  }
+
+  #messages {
+    height: 200px;
+    padding: 0.6rem;
+  }
+
+  #inputArea {
+    flex-direction: column;
+  }
+
+  #msgInput {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  #status {
+    font-size: 0.9rem;
+  }
+
+  .typing {
+    font-size: 0.8rem;
+  }
+}
