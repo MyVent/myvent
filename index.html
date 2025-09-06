@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>MyVent — anonymer Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎶 MyVent</h1>
+    <p>Random Text-Only Chat</p>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h2>Sag es Fremden. <span class="accent">MyVent</span> hört zu.</h2>
+      <button id="connectBtn">Verbinde mich</button>
+      <p class="error" id="error"></p>
+    </section>
+
+    <section id="chat" class="hidden">
+      <div id="status">Warten auf Partner…</div>
+      <div id="messages"></div>
+      <div class="typing" id="typing"></div>
+      <div id="inputArea">
+        <textarea id="msgInput" placeholder="Schreib etwas Nettes…"></textarea>
+        <button id="sendBtn">Senden</button>
+      </div>
+      <div class="controls">
+        <button id="newChatBtn">Neuer Chat</button>
+        <button id="disconnectBtn">Trennen</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Keine Anmeldung, keine Speicherung. Bleib freundlich ✌️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

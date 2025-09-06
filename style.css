@@ -1,0 +1,132 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap');
+
+:root {
+  --bg: #0e0d11;
+  --card: #17151d;
+  --ink: #f6f1e9;
+  --accent: #ffb3c1;
+  --accent2: #8fd3fe;
+}
+
+body {
+  margin: 0;
+  background: var(--bg) url("data:image/png;base64,iVBORw0K...") repeat;
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
+header p {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+main {
+  flex: 1;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+#intro {
+  text-align: center;
+}
+#intro h2 {
+  font-size: 1.5rem;
+}
+.accent {
+  color: var(--accent);
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #222;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+#chat {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#messages {
+  flex: 1;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.2);
+}
+
+.msg {
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 75%;
+}
+.msg.me {
+  margin-left: auto;
+  background: var(--accent2);
+  color: #111;
+}
+.msg.peer {
+  margin-right: auto;
+  background: var(--card);
+}
+.msg.sys {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+#inputArea {
+  display: flex;
+  gap: 6px;
+}
+#msgInput {
+  flex: 1;
+  resize: none;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px;
+  background: transparent;
+  color: var(--ink);
+}
+#msgInput:disabled {
+  opacity: 0.5;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 10px;
+  opacity: 0.6;
+}
+
+.hidden { display: none; }
+.error { color: #f88; margin-top: 8px; }
